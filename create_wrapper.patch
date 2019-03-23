@@ -1,0 +1,58 @@
+diff --git a/src/parser.c b/src/parser.c
+index a839296..2bca4b3 100644
+--- a/src/parser.c
++++ b/src/parser.c
+@@ -1,17 +1,4 @@
+-#include <tree_sitter/parser.h>
+-
+-#if defined(__GNUC__) || defined(__clang__)
+-#pragma GCC diagnostic push
+-#pragma GCC diagnostic ignored "-Wmissing-field-initializers"
+-#endif
+-
+-#define LANGUAGE_VERSION 9
+-#define STATE_COUNT 1704
+-#define SYMBOL_COUNT 349
+-#define ALIAS_COUNT 2
+-#define TOKEN_COUNT 174
+-#define EXTERNAL_TOKEN_COUNT 0
+-#define MAX_ALIAS_SEQUENCE_LENGTH 7
++#include "parser.h"
+ 
+ enum {
+   anon_sym_SEMI = 1,
+diff --git a/src/parser.h b/src/parser.h
+new file mode 100644
+index 0000000..02ecc38
+--- /dev/null
++++ b/src/parser.h
+@@ -0,0 +1,16 @@
++#include "tree_sitter/parser.h"
++
++#if defined(__GNUC__) || defined(__clang__)
++#pragma GCC diagnostic push
++#pragma GCC diagnostic ignored "-Wmissing-field-initializers"
++#endif
++
++#define LANGUAGE_VERSION 9
++#define STATE_COUNT 1704
++#define SYMBOL_COUNT 349
++#define ALIAS_COUNT 2
++#define TOKEN_COUNT 174
++#define EXTERNAL_TOKEN_COUNT 0
++#define MAX_ALIAS_SEQUENCE_LENGTH 7
++
++extern const TSLanguage *tree_sitter_java();
+diff --git a/src/parser.i b/src/parser.i
+new file mode 100644
+index 0000000..4013589
+--- /dev/null
++++ b/src/parser.i
+@@ -0,0 +1,7 @@
++%module tree_sitter_java
++%{
++#include "parser.h"
++%}
++
++%include "parser.h"
++

@@ -21,4 +21,3 @@ mv tree_sitter_api.py _tree_sitter_api.so api
 rm -f *.o 
 rm -f api_wrap.c
 printf " DONE\n "
-

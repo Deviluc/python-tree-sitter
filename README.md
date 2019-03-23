@@ -6,6 +6,9 @@ Reuires python 3.7m
 
 ```./build.sh```
 
+### Building java parser
+```./build_java.sh```
+
 ## Usage
 ```
 from python-tree-sitter import api
