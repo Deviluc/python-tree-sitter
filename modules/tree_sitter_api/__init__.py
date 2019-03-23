@@ -6,6 +6,8 @@ from .tree_sitter_api import TSPoint as Point
 from .tree_sitter_api import TSRange as Range
 from .tree_sitter_api import TSInputEdit as InputEdit
 
+__name__ = "tree_sitter_api"
+
 
 class InputEncoding(Enum):
 

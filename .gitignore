@@ -1,0 +1,4 @@
+build
+dist
+python_tree_sitter-egg-info
+python_tree_sitter.egg-info
