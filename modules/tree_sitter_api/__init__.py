@@ -222,6 +222,9 @@ class Node:
     def edit(self, input_edit):
         tapi.ts_node_edit(self, input_edit)
 
+    def __len__(self):
+        return self.child_count()
+
     def __eq__(self, other):
         if type(other) == Node:
             return self.__node.id == other.__node.id
