@@ -49,7 +49,7 @@ Used to parse source code from an input source (currently only strings)
 | set_included_ranges       | [Range]               | Set ranges to parse (multi languages in one file)     |
 | get_included_ranges       | None / [Range]        | Returns the ranges the parser will parse              |
 
-### Tree
+### Tree (tree_sitter_api.Tree)
 Represents the parsed source code
 
 | Method                    | Arguments / Return    | Description                                           |
@@ -61,7 +61,7 @@ Represents the parsed source code
 | print_dot_graph           | String                | Prints the dot graph into the file specified by path  |
 | language                  | TSLanguage            | Returns the source language                           |
 
-### Node
+### Node (tree_sitter_api.Node)
 Represents a node in the tree and a token in the source
 
 | Method                     | Arguments / Return    | Description                                              |
@@ -96,7 +96,7 @@ Represents a node in the tree and a token in the source
 | named_descendant_for_point_range | Point,Point / Node | ???                                                   |
 | edit                       | TSInputEdit           | Edit this Node                                           |
 
-### TreeCursor
+### TreeCursor (tree_sitter_api.TreeCursor)
 Represents a cursor for tree-traversal
 
 | Method                        | Arguments / Return    | Description                                           |
