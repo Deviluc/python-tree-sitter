@@ -18,7 +18,7 @@ printf "Linking... "
 ld -shared parser.o parser_wrap.o -o _tree_sitter_java.so
 printf "DONE\n"
 printf "Cleaning up... "
-mv tree_sitter_java.py _tree_sitter_java.so ../../modules/tree-sitter-java
+mv tree_sitter_java.py _tree_sitter_java.so ../../modules/tree_sitter_java
 rm -f *.o parser_wrap.c parser.i parser.h
 git reset --hard
 cd ../../

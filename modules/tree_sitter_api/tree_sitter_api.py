@@ -659,6 +659,41 @@ def p_TSTreeCursor_frompointer(t):
     return _tree_sitter_api.p_TSTreeCursor_frompointer(t)
 p_TSTreeCursor_frompointer = _tree_sitter_api.p_TSTreeCursor_frompointer
 
+class p_TSTree(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, p_TSTree, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, p_TSTree, name)
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        this = _tree_sitter_api.new_p_TSTree()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _tree_sitter_api.delete_p_TSTree
+    __del__ = lambda self: None
+
+    def assign(self, value):
+        return _tree_sitter_api.p_TSTree_assign(self, value)
+
+    def value(self):
+        return _tree_sitter_api.p_TSTree_value(self)
+
+    def cast(self):
+        return _tree_sitter_api.p_TSTree_cast(self)
+    if _newclass:
+        frompointer = staticmethod(_tree_sitter_api.p_TSTree_frompointer)
+    else:
+        frompointer = _tree_sitter_api.p_TSTree_frompointer
+p_TSTree_swigregister = _tree_sitter_api.p_TSTree_swigregister
+p_TSTree_swigregister(p_TSTree)
+
+def p_TSTree_frompointer(t):
+    return _tree_sitter_api.p_TSTree_frompointer(t)
+p_TSTree_frompointer = _tree_sitter_api.p_TSTree_frompointer
+
 class p_TSNode(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, p_TSNode, name, value)
